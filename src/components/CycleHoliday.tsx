@@ -13,7 +13,7 @@ const holidayEmojis: Record<Holiday, string> = {
     Easter: "🐰",
     Halloween: "🎃",
     "New Year": "🎆",
-    Thanksgiving: "🦃"
+    Thanksgiving: "🦃",
 };
 
 const alphabeticalOrder: Holiday[] = [
@@ -21,14 +21,14 @@ const alphabeticalOrder: Holiday[] = [
     "Easter",
     "Halloween",
     "New Year",
-    "Thanksgiving"
+    "Thanksgiving",
 ];
 const yearlyOrder: Holiday[] = [
     "New Year",
     "Easter",
     "Halloween",
     "Thanksgiving",
-    "Christmas"
+    "Christmas",
 ];
 
 export function CycleHoliday(): React.JSX.Element {
@@ -37,7 +37,7 @@ export function CycleHoliday(): React.JSX.Element {
     function nextAlphabetically(): void {
         const currentIndex = alphabeticalOrder.indexOf(currentHoliday);
         setCurrentHoliday(
-            alphabeticalOrder[(currentIndex + 1) % alphabeticalOrder.length]
+            alphabeticalOrder[(currentIndex + 1) % alphabeticalOrder.length],
         );
     }
 
